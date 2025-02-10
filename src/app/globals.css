@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Add these custom styles for better modal visibility */
+.modal-content pre {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  color: #212529;
+}
+
+.modal-content code {
+  color: #1a1a1a;
+}
+
+/* Prism.js theme customization */
+pre[class*="language-"] {
+  background: #1a1a1a !important;
+  border-radius: 0.5rem;
+  margin: 0 !important;
+  padding: 1rem !important;
+}
+
+code[class*="language-"] {
+  text-shadow: none !important;
+  color: #e4e4e7 !important;
+}
+
+.token.property {
+  color: #93c5fd !important;
+}
+
+.token.string {
+  color: #86efac !important;
+}
+
+.token.number {
+  color: #fca5a5 !important;
+}
+
+.token.boolean {
+  color: #f472b6 !important;
+}
+
+.token.null {
+  color: #f472b6 !important;
+}
+
+/* Scrollbar styling */
+pre::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #52525b;
+  border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: #71717a;
+}
